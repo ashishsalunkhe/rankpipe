@@ -25,7 +25,7 @@ Only the latest tagged release receives fixes.
 
 Please **do not** open a public issue. Report privately via
 [GitHub's private vulnerability reporting](https://github.com/ashishsalunkhe/rankpipe/security/advisories/new)
-or by email to avsalunkhe98@gmail.com.
+or by email to ashishvs027@gmail.com.
 
 Include a minimal reproducer if you can. You will get an acknowledgement
 within 7 days and a fix or a documented decision within 30 days for confirmed
