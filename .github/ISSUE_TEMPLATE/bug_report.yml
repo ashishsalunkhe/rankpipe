@@ -1,0 +1,51 @@
+name: Bug report
+description: Something behaves differently from what the docs or DESIGN.md promise
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. The most useful thing you can give us is a minimal reproducer as a Go test.
+  - type: input
+    id: version
+    attributes:
+      label: rankpipe version
+      placeholder: v0.1.0 (or commit SHA)
+    validations:
+      required: true
+  - type: input
+    id: go
+    attributes:
+      label: Go version and platform
+      placeholder: go1.24.3 darwin/arm64
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproducer
+      description: Pipeline definition, input, and how you called Run. A `_test.go` file is ideal.
+      render: go
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+      description: Quote the contract from the docs, README or DESIGN.md if you can.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: Output, error, panic trace, or `res.Stages` reports.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I ran the reproducer with `go test -race` and included any race report.
+        - label: This is not a question about how to implement a scorer/filter/reranker (rankpipe does not implement ranking logic).

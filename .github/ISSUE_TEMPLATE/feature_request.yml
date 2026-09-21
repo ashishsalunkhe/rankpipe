@@ -1,0 +1,43 @@
+name: Feature request
+description: Propose a change to the API or execution semantics
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        rankpipe is intentionally small. Please read the non-goals in README.md and DESIGN.md §4 before proposing.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The execution problem this solves
+      description: Describe the concrete situation in a production ranking service, not the solution. Which stage, what fails, what is hard to express today?
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How you work around it today
+      description: E.g. with Transform, a custom Stage, or code outside rankpipe. If it is already expressible, explain why that is not good enough.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed API or behaviour
+      description: Sketch the Go API. State the contract (ownership, ordering, determinism, cancellation, failure policy) it would need.
+      render: go
+  - type: textarea
+    id: design
+    attributes:
+      label: Interaction with existing decisions
+      description: Which DESIGN.md decisions does this touch, and does it contradict any of them?
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Is this within rankpipe's scope?
+      options:
+        - Yes — execution semantics of a ranking funnel
+        - Unsure
+        - It adds ranking/ML/storage logic (likely out of scope)
+    validations:
+      required: true

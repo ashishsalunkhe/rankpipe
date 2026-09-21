@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ashishsalunkhe/rankpipe/security/advisories/new
+    about: Please report security issues privately, not as a public issue.
+  - name: Design rationale
+    url: https://github.com/ashishsalunkhe/rankpipe/blob/main/DESIGN.md
+    about: Every architecture and API decision, with rejected alternatives.
